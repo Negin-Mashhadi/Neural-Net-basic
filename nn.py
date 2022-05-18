@@ -26,9 +26,9 @@ class Neural_Network(object):
 
   def forward(self, X):
     #forward propagation through our network
-    self.z = np.dot(X, self.W1) # dot product of X (input) and first set of 3x2 weights
+    self.z = np.dot(X, self.W1) # dot product of X (input) and first set of 5x2 weights
     self.z2 = self.sigmoid(self.z) # activation function
-    self.z3 = np.dot(self.z2, self.W2) # dot product of hidden layer (z2) and second set of 3x1 weights
+    self.z3 = np.dot(self.z2, self.W2) # dot product of hidden layer (z2) and second set of 5x1 weights
     o = self.sigmoid(self.z3) # final activation function
     return o
 
